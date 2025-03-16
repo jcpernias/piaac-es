@@ -1,7 +1,7 @@
 library(dplyr)
 library(readr)
 library(glue)
-library(purrr)
+library(stringr)
 
 get_col_types <- function(cycle) {
   fname <- glue("data-raw/col_codes{cycle}.csv")
@@ -18,3 +18,15 @@ cols1 <- get_col_types(2)
 esp2 <- read_delim("data-raw/prgespp2.csv.gz", col_types = cols2,
                    delim = ";", na = ".")
 
+
+common_vars <- c("SEQID", "GENDER_R", "AGE_R")
+vars1 <- c(common_vars, "EARNHR", "EDCAT7")
+db1 <- esp1 |>
+  select(all_of(vars1)) |>
+  mutate(EARNHR = parse_double(EARNHR, na = "V"),
+         EDCAT7 = parse_integer(EDCAT7, na = "N"))
+
+vars2 <- c(common_vars, "EARNHRC2", "EDCAT7_TC1")
+db2 <- esp2 |>
+  select(all_of(vars2)) |>
+  mutate(EARNHRC2 = parse_double(EARNHRC2, na = ".v"))
