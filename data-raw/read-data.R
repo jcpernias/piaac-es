@@ -14,7 +14,7 @@ cols1 <- get_col_types(1)
 esp1 <- read_csv("data-raw/prgespp1.csv.gz", col_types = cols1)
 
 # Lee los datos del primer ciclo
-cols1 <- get_col_types(2)
+cols2 <- get_col_types(2)
 esp2 <- read_delim("data-raw/prgespp2.csv.gz", col_types = cols2,
                    delim = ";", na = ".")
 
