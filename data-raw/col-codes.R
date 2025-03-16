@@ -13,7 +13,7 @@ col_type_codes <- c("collector_double" = "d",
 
 get_type <- function(x) {
   cls <- class(x)[1]
-  col_type_codes[cls]
+  col_type_codes[cls] |> unname()
 }
 
 
@@ -26,9 +26,10 @@ esp1 <- read_csv("data-raw/prgespp1.csv.gz",
 
 # Tabla con nombres y tipos de variables
 cols1 <- spec(esp1)[[1]]
+types1 <- map_vec(cols1, get_type) |> unname()
 vars1 <- tibble(col = 1:length(cols1),
                 name = names(cols1),
-                type = map(cols1, get_type))
+                type = types1)
 
 # Problemas en la lectura de datos
 probl1 <- problems(esp1) |>
@@ -48,10 +49,10 @@ esp2 <- read_delim("data-raw/prgespp2.csv.gz",
 
 # Tabla con nombres y tipos de variables
 cols2 <- spec(esp2)[[1]]
-
+types2 <- map_vec(cols2, get_type) |> unname()
 vars2 <- tibble(col = 1:length(cols2),
                 name = names(cols2),
-                type = map(cols2, get_type))
+                type = types2)
 probl2 <- problems(esp2) |>
   filter(!between(col, 2106, 2108)) |>
   select(-file)
