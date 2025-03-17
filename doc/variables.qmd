@@ -90,3 +90,5 @@ The databases contain the following variables:
     |:------|:--------------|
     | 1     | Employee      |
     | 2     | Self-employed |
+
+-   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
