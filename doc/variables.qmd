@@ -92,3 +92,22 @@ The databases contain the following variables:
     | 2     | Self-employed |
 
 -   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
+
+-   `D2_Q10_C`: Current work - Type of contract (3 categories).
+
+    | Value | Label                                              |
+    |:------|:---------------------------------------------------|
+    | 1     | An indefinite contract                             |
+    | 2     | A fixed term contract, including seasonal contract |
+    | 3     | Other                                              |
+
+    `D_Q09` is a similar variable in cycle 1: Current work - Type of contract.
+
+    | Value | Label                                      |
+    |:------|:-------------------------------------------|
+    | 1     | An indefinite contract                     |
+    | 2     | A fixed term contract                      |
+    | 3     | A temporary employment agency contract     |
+    | 4     | An apprenticeship or other training scheme |
+    | 5     | No contract                                |
+    | 6     | Other                                      |
