@@ -70,3 +70,12 @@ The databases contain the following variables:
     | 4     | Student (including work programs) |
     | 5     | Doing unpaid household work       |
     | 6     | Other                             |
+
+-   `C_D05`: Current status/work history - Employment status (DERIVED BY CAPI).
+
+    | Value | Label                   |
+    |:------|:------------------------|
+    | 1     | Employed                |
+    | 2     | Unemployed              |
+    | 3     | Out of the labour force |
+    | 4     | Not known               |
