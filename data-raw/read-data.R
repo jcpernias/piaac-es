@@ -22,7 +22,7 @@ esp2 <- read_delim("data-raw/prgespp2.csv.gz", col_types = cols2,
 common_vars <- c("SEQID", "GENDER_R", "AGE_R", "PVLIT1", "PVNUM1")
 vars1 <- c("EARNHR", "EDCAT7", "C_Q07_T", "C_D05",
            "C_Q09", "D_Q03", "D_Q04", "D_Q05a1", "D_Q09",
-           "D_Q12a", "D_Q12c", "J_Q01",
+           "D_Q12a", "D_Q12c", "J_Q01", "J_Q02a",
            common_vars)
 db1 <- esp1 |>
   select(all_of(vars1)) |>
@@ -39,12 +39,13 @@ db1 <- esp1 |>
          D_Q12a = parse_integer(D_Q12a, na = c("V", "N", "R", "D")),
          D_Q12c = parse_integer(D_Q12c, na = c("V", "N", "R", "D")),
          J_Q01 = parse_integer(J_Q01, na = c("N", "R", "D")),
+         J_Q02a = parse_integer(J_Q02a, na = c("V", "N", "R")),
   ) |>
   select(-D_Q09)
 
 vars2 <- c("EARNHRC2", "EDCAT7_TC1", "C2_Q07_T", "C2_D05",
            "C2_Q10", "D2_Q03", "D2_Q04", "D2_Q05a1", "D2_Q10_C",
-           "D2_Q12a_TC1", "D2_Q12d", "J2_Q01",
+           "D2_Q12a_TC1", "D2_Q12d", "J2_Q01", "J2_Q02a",
            common_vars, "PVAPS1")
 db2 <- esp2 |>
   select(all_of(vars2)) |>
@@ -56,6 +57,7 @@ db2 <- esp2 |>
          D2_Q10_C = parse_integer(D2_Q10_C, na = c(".v", ".r", ".d")),
          D2_Q12a_TC1 = parse_integer(D2_Q12a_TC1, na = c(".v", ".r", ".d")),
          D2_Q12d = parse_integer(D2_Q12d, na = c(".v", ".r", ".d")),
+         J2_Q02a = parse_integer(J2_Q02a, na = c(".v", ".r", ".d")),
   ) |>
   rename(EARNHR = EARNHRC2,
          EDCAT7 = EDCAT7_TC1,
@@ -67,5 +69,6 @@ db2 <- esp2 |>
          D_Q05a1 = D2_Q05a1,
          D_Q12c = D2_Q12d,
          J_Q01 = J2_Q01,
+         J_Q02a = J2_Q02a,
   )
 
