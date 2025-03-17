@@ -1,0 +1,59 @@
+---
+title: "Variables"
+
+lang: en
+execute: 
+  echo: false
+
+format: 
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+    theme: cosmo
+    html-math-method: katex
+  pdf:
+    papersize: a4
+    documentclass: article
+    number-sections: true
+    colorlinks: true
+    pdf-engine: pdflatex
+    fontfamily: kpfonts
+---
+
+The databases contain the following variables:
+
+-   `SEQID`: Sequential ID (randomly derived).
+
+<!-- -->
+
+-   `GENDER_R`: Person gender.
+
+    | Value | Label  |
+    |:------|:-------|
+    | 1     | Male   |
+    | 2     | Female |
+
+-   `AGE_R`: Person age.
+
+-   `EARNHR`: Hourly earnings excluding bonuses for wage and salary earners (derived).
+
+<!-- -->
+
+-   `EDCAT7`: Highest level of formal education obtained (7 categories - derived).
+
+    | Value | Label                                          |
+    |:------|:-----------------------------------------------|
+    | 1     | Primary or less (ISCED 1 or less)              |
+    | 2     | Lower secondary (ISCED 2, ISCED 3C short)      |
+    | 3     | Upper secondary (ISCED 3A-B, C long)           |
+    | 4     | Post-secondary, non-tertiary (ISCED 4A-B-C)    |
+    | 5     | Tertiary - professional degree (ISCED 5B)      |
+    | 6     | Tertiary - bachelor degree (ISCED 5A)          |
+    | 7     | Tertiary - master/research degree (ISCED 5A/6) |
+
+<!-- -->
+
+-   `PVLIT1`: Literacy scale score - Plausible value 1.
+-   `PVNUM1`: Numeracy scale score - Plausible value 1.
+-   `PVAPS1`: **(Cycle 2 only)**. Adaptive Problem Solving scale score - Plausible value 1.
