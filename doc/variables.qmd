@@ -38,8 +38,6 @@ The databases contain the following variables:
 
 -   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
 
-<!-- -->
-
 -   `EDCAT7`: (`EDCAT7_TC1` in cycle 2). Highest level of formal education obtained (7 categories - derived).
 
     | Value | Label                                          |
@@ -51,8 +49,6 @@ The databases contain the following variables:
     | 5     | Tertiary - professional degree (ISCED 5B)      |
     | 6     | Tertiary - bachelor degree (ISCED 5A)          |
     | 7     | Tertiary - master/research degree (ISCED 5A/6) |
-
-<!-- -->
 
 -   `PVLIT1`: Literacy scale score - Plausible value 1.
 
@@ -85,7 +81,7 @@ The databases contain the following variables:
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
     | Value | Label |
-    |:-----------|:-----------------------------------------------------------|
+    |:---------------|:-------------------------------------------------------|
     | 1 | The private sector (for example a company) |
     | 2 | The public sector (for example the local government or a state school) |
     | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
