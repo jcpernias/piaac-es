@@ -55,5 +55,18 @@ The databases contain the following variables:
 <!-- -->
 
 -   `PVLIT1`: Literacy scale score - Plausible value 1.
+
 -   `PVNUM1`: Numeracy scale score - Plausible value 1.
+
 -   `PVAPS1`: **(Cycle 2 only)**. Adaptive Problem Solving scale score - Plausible value 1.
+
+-   `C_Q07_T`: Current work situation (Trend-IALS/ALL).
+
+    | Value | Label                             |
+    |:------|:----------------------------------|
+    | 1     | Employed or self employed         |
+    | 2     | Retired                           |
+    | 3     | Not working and looking for work  |
+    | 4     | Student (including work programs) |
+    | 5     | Doing unpaid household work       |
+    | 6     | Other                             |
