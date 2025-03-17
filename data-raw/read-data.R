@@ -31,5 +31,7 @@ vars2 <- c("EARNHRC2", "EDCAT7_TC1", common_vars, "PVAPS1")
 db2 <- esp2 |>
   select(all_of(vars2)) |>
   mutate(EARNHRC2 = parse_double(EARNHRC2, na = ".v"),
-  )
+  ) |>
+  rename(EARNHR = EARNHRC2,
+         EDCAT7 = EDCAT7_TC1)
 
