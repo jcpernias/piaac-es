@@ -81,3 +81,11 @@ The databases contain the following variables:
     | 4     | Not known               |
 
 -   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
+
+-   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
+
+    | Value | Label |
+    |:---|:---|
+    | 1 | The private sector (for example a company) |
+    | 2 | The public sector (for example the local government or a state school) |
+    | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
