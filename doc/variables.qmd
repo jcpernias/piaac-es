@@ -79,7 +79,7 @@ The databases contain the following variables:
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
     | Value | Label |
-    |:---|:---|
+    |:---------|:-------------------------------------------------------------|
     | 1 | The private sector (for example a company) |
     | 2 | The public sector (for example the local government or a state school) |
     | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
@@ -111,3 +111,23 @@ The databases contain the following variables:
     | 4     | An apprenticeship or other training scheme |
     | 5     | No contract                                |
     | 6     | Other                                      |
+
+-   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
+
+    | Value | Label |
+    |:---------|:------------------------------------------------------------|
+    | 1 | No formal qualification or below ISCED 1 |
+    | 2 | ISCED 1 |
+    | 3 | ISCED 2 |
+    | 4 | ISCED 3C shorter than 2 years |
+    | 5 | ISCED 3C 2 years or more |
+    | 6 | ISCED 3A-B |
+    | 7 | ISCED 3 (without distinction A-B-C, 2y+) |
+    | 8 | ISCED 4C |
+    | 9 | ISCED 4A-B |
+    | 10 | ISCED 4 (without distinction A-B-C) |
+    | 11 | ISCED 5B |
+    | 12 | ISCED 5A, bachelor degree |
+    | 13 | ISCED 5A, master degree |
+    | 14 | ISCED 6 |
+    | 15 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
