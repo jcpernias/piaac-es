@@ -36,11 +36,11 @@ The databases contain the following variables:
 
 -   `AGE_R`: Person age.
 
--   `EARNHR`: Hourly earnings excluding bonuses for wage and salary earners (derived).
+-   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
 
 <!-- -->
 
--   `EDCAT7`: Highest level of formal education obtained (7 categories - derived).
+-   `EDCAT7`: (`EDCAT7_TC1` in cycle 2). Highest level of formal education obtained (7 categories - derived).
 
     | Value | Label                                          |
     |:------|:-----------------------------------------------|
@@ -60,7 +60,7 @@ The databases contain the following variables:
 
 -   `PVAPS1`: **(Cycle 2 only)**. Adaptive Problem Solving scale score - Plausible value 1.
 
--   `C_Q07_T`: Current work situation (Trend-IALS/ALL).
+-   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
 
     | Value | Label                             |
     |:------|:----------------------------------|
@@ -71,7 +71,7 @@ The databases contain the following variables:
     | 5     | Doing unpaid household work       |
     | 6     | Other                             |
 
--   `C_D05`: Current status/work history - Employment status (DERIVED BY CAPI).
+-   `C_D05`: (`C2_D05` in cycle 2). Current status/work history - Employment status (DERIVED BY CAPI).
 
     | Value | Label                   |
     |:------|:------------------------|
@@ -79,3 +79,5 @@ The databases contain the following variables:
     | 2     | Unemployed              |
     | 3     | Out of the labour force |
     | 4     | Not known               |
+
+-   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
