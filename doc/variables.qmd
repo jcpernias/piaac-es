@@ -79,7 +79,7 @@ The databases contain the following variables:
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
     | Value | Label |
-    |:------------------|:----------------------------------------------------|
+    |:---------------------|:-------------------------------------------------|
     | 1 | The private sector (for example a company) |
     | 2 | The public sector (for example the local government or a state school) |
     | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
@@ -115,7 +115,7 @@ The databases contain the following variables:
 -   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
 
     | Value | Label |
-    |:------------------|:----------------------------------------------------|
+    |:---------------------|:-------------------------------------------------|
     | 1 | No formal qualification or below ISCED 1 |
     | 2 | ISCED 1 |
     | 3 | ISCED 2 |
@@ -151,3 +151,95 @@ The databases contain the following variables:
     |:------|:------|
     | 1     | Yes   |
     | 2     | No    |
+
+-   `J_Q02c`: (`J2_Q02b` in cycle 2). Background - Work situation of spouse or partner.
+
+    | Value | Label                                                      |
+    |:------|:-----------------------------------------------------------|
+    | 1     | Full-time employed (self-employed, employee)               |
+    | 2     | Part-time employed (self-employed, employee)               |
+    | 3     | Unemployed                                                 |
+    | 4     | Pupil, student                                             |
+    | 5     | Apprentice, internship                                     |
+    | 6     | In retirement or early retirement                          |
+    | 7     | Permanently disabled                                       |
+    | 8     | In compulsory military or community service                |
+    | 9     | Fulfilling domestic tasks or looking after children/family |
+    | 10    | Other                                                      |
+
+-   `J_Q03a`: (`J2_Q03a` in cycle 2). Background - Children.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `J_Q03b`: (`J2_Q03b` in cycle 2). Background - Number of children.
+
+-   `J_Q04a`: (`A2_Q03a` in cycle 2). Background - Born in country.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `J_Q04c1`: (`A2_Q03c1` in cycle 2). Background - Age of immigration.
+
+-   `J_Q04c2`: (`A2_Q03c2` in cycle 2). Background - Year of immigration.
+
+-   `J_Q06a`: (`A2_Q03d` in cycle 2). Background - Mother/female guardian - Whether born in country.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `J_Q06b`: Background - Mother/female guardian - Highest level of education.
+
+    | Value | Label                              |
+    |:------|:-----------------------------------|
+    | 1     | ISCED 1, 2, and 3C short           |
+    | 2     | ISCED 3 (excluding 3C short) and 4 |
+    | 3     | ISCED 5 and 6                      |
+
+    `J2_Q04c` is a similar variable in cycle 2: Background - Mother/female guardian - Highest level of education.
+
+    | Value | Label             |
+    |:------|:------------------|
+    | 1     | ISCED 0, 1, and 2 |
+    | 2     | ISCED 3 and 4     |
+    | 3     | ISCED 5--8        |
+
+-   `J_Q07a`: (`A2_Q03e` in cycle 2). Background - Father/male guardian - Whether born in #counrtyname.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `J_Q07b`: Background - Father/male guardian - Highest level of education.
+
+    | Value | Label                              |
+    |:------|:-----------------------------------|
+    | 1     | ISCED 1, 2, and 3C short           |
+    | 2     | ISCED 3 (excluding 3C short) and 4 |
+    | 3     | ISCED 5 and 6                      |
+
+    `J2_Q05c` is a similar variable in cycle 2: Background - Father/male guardian - Highest level of education.
+
+    | Value | Label             |
+    |:------|:------------------|
+    | 1     | ISCED 0, 1, and 2 |
+    | 2     | ISCED 3 and 4     |
+    | 3     | ISCED 5--8        |
+
+-   `J_Q08`: (`J2_Q06` in cycle 2). Background - Number of books at home.
+
+    | Value | Label               |
+    |:------|:--------------------|
+    | 1     | 10 books or less    |
+    | 2     | 11 to 25 books      |
+    | 3     | 26 to 100 books     |
+    | 4     | 101 to 200 books    |
+    | 5     | 201 to 500 books    |
+    | 6     | More than 500 books |
