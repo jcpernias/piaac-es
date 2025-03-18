@@ -5,3 +5,4 @@
 data-raw/*.csv
 *.html
 *.pdf
+_targets
