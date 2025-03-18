@@ -27,7 +27,6 @@ J_Q06a,1,i,N|D|R,,
 J_Q06b,1,i,N|D|R,,
 J_Q07a,1,i,N|D|R,,
 J_Q07b,1,i,N|D|R,,
-J_Q08,1,i,N|D|R,,
 EARNHRC2,2,d,.v,,EARNHR
 EDCAT7_TC1,2,,,,EDCAT7
 C2_Q07_T,2,,,,C_Q07_T
@@ -51,4 +50,3 @@ A2_Q03d,2,,.v|.d|.r,,J_Q06a
 J2_Q04c,2,i,.d|.r,,J_Q06b
 A2_Q03e,2,i,.d,,J_Q07a
 J2_Q05c,2,i,.d|.r,,J_Q07b
-J2_Q06,2,i,.d|.r,,J_Q08
