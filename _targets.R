@@ -10,7 +10,7 @@ library(tarchetypes) # Load other packages as needed.
 # Set target options:
 tar_option_set(
   # Packages that your targets need for their tasks.
-  packages = c("tibble", "dplyr", "readr", "purrr"),
+  packages = c("tibble", "dplyr", "readr", "purrr", "stringr"),
   # Optionally set the default storage format. qs is fast.
   format = "qs",
   #
@@ -55,5 +55,8 @@ list(
   tar_target(puf_esp_c1, "data-raw/prgespp1.csv.gz", format = "file"),
   tar_target(puf_esp_c2, "data-raw/prgespp2.csv.gz", format = "file"),
   tar_target(esp_c1, read_puf(puf_esp_c1)),
-  tar_target(esp_c2, read_puf(puf_esp_c2, delim = ";", na = "."))
+  tar_target(esp_c2, read_puf(puf_esp_c2, delim = ";", na = ".")),
+  tar_target(select_vars, "data-raw/select-vars.csv", format = "file"),
+  tar_target(db, make_db(esp_c1, esp_c2, select_vars)),
+  tar_target(db_csv, store_db(db), format = "file")
 )

@@ -3,6 +3,8 @@
 .RData
 .Ruserdata
 data-raw/*.csv
+!data-raw/select-vars.csv
 *.html
 *.pdf
 _targets
+data
