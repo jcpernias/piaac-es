@@ -8,3 +8,4 @@ data-raw/*.csv
 *.pdf
 _targets
 data
+*.xlsx
