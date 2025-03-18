@@ -58,5 +58,6 @@ list(
   tar_target(esp_c2, read_puf(puf_esp_c2, delim = ";", na = ".")),
   tar_target(select_vars, "data-raw/select-vars.csv", format = "file"),
   tar_target(db, make_db(esp_c1, esp_c2, select_vars)),
-  tar_target(db_csv, store_db(db), format = "file")
+  tar_target(db_csv, store_db(db), format = "file"),
+  tar_quarto(doc, "doc/variables.qmd")
 )
