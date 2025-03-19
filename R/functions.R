@@ -83,6 +83,9 @@ make_db <- function(c1, c2, vars_file) {
 }
 
 store_db <- function(db) {
+  if (!dir.exists("data")) {
+    dir.create("data")
+  }
   path <- file.path("data", "piaac-es.csv")
   write_csv(db, path, na = "")
   path
