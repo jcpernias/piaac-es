@@ -6,6 +6,7 @@ PVLIT1,1|2,,,,
 PVNUM1,1|2,,,,
 EARNHR,1,d,V,,
 EDCAT7,1,i,N,,
+B_Q01a,1,i,N|D|R,15=NA,
 C_Q07_T,1,i,N|M,,
 C_D05,1,i,N,,
 C_Q09,1,i,N|V|D|R,,
@@ -29,6 +30,7 @@ J_Q07a,1,i,N|D|R,,
 J_Q07b,1,i,N|D|R,,
 EARNHRC2,2,d,.v,,EARNHR
 EDCAT7_TC1,2,,,,EDCAT7
+B2_Q01_TC1,2,,,,B_Q01a
 C2_Q07_T,2,,,,C_Q07_T
 C2_D05,2,,,,C_D05
 C2_Q10,2,i,.v|.d|.r,,C_Q09

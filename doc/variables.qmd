@@ -32,7 +32,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `cycle`: PIAAC cycle.
 
     | Value | Label |
-    |:------------------|:----------------------------------------------------|
+    |:--------------------|:--------------------------------------------------|
     | 1 | Cycle 1 (the survey in Spain was conducted from September 2011 to April 2012. Spain did not participate in the problem-solving assessment.) |
     | 2 | Cycle 2 (the survey was conducted in Spain from September 2022 to May 2023) |
 
@@ -153,6 +153,27 @@ Most of the variable names are taken from the cycle 1 database.
     | 6     | Tertiary - bachelor degree (ISCED 5A)          |
     | 7     | Tertiary - master/research degree (ISCED 5A/6) |
 
+-   `B_Q01a`: (`B2_Q01_TC1` in cycle 2). Education - Highest qualification - Level. (*Note: Values 15 and 16 were not used in cycle 2. In the Spanish data, only 32 observations took the value 15 and were recoded as NA. Value 16 was not present in the Spanish data*.)
+
+    | Value | Label |
+    |:-------------|:--------------------------------------------------------|
+    | 1 | No formal qualification or below ISCED 1 |
+    | 2 | ISCED 1 |
+    | 3 | ISCED 2 |
+    | 4 | ISCED 3C shorter than 2 years |
+    | 5 | ISCED 3C 2 years or more |
+    | 6 | ISCED 3A-B |
+    | 7 | ISCED 3 (without distinction A-B-C, 2y+) |
+    | 8 | ISCED 4C |
+    | 9 | ISCED 4A-B |
+    | 10 | ISCED 4 (without distinction A-B-C) |
+    | 11 | ISCED 5B |
+    | 12 | ISCED 5A, bachelor degree |
+    | 13 | ISCED 5A, master degree |
+    | 14 | ISCED 6 |
+    | 15 | Foreign qualification |
+    | 16 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
+
 # Labor force status, work history and job characteristics
 
 -   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
@@ -182,7 +203,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
     | Value | Label |
-    |:------------------------|:-----------------------------------------------|
+    |:------------------------|:---------------------------------------------|
     | 1 | The private sector (for example a company) |
     | 2 | The public sector (for example the local government or a state school) |
     | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
@@ -218,7 +239,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
 
     | Value | Label |
-    |:------------------------|:-----------------------------------------------|
+    |:------------------------|:---------------------------------------------|
     | 1 | No formal qualification or below ISCED 1 |
     | 2 | ISCED 1 |
     | 3 | ISCED 2 |
@@ -253,3 +274,35 @@ Most of the variable names are taken from the cycle 1 database.
 -   `PVLIT1`: Literacy scale score - Plausible value 1.
 
 -   `PVNUM1`: Numeracy scale score - Plausible value 1.
+
+# Missing variables
+
+Cycle 1:
+
+-   `D_Q16b_T`: Wage or salary \[weekly/hourly\] before taxes and deductions (Trend-IALS/ALL)
+
+Cycle 2:
+
+-   `D2_Q10`: Current work - Type of contract
+
+-   `E2_Q06`: Last job - Amount of people working for employer
+
+-   `E2_Q08`: Last job - Type of contract
+
+-   `EARNHRBONUSPPPC2`: Hourly earnings including bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNHRPPPC2`: Hourly earnings excluding bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNMTHBONUSPPPC2`: Monthly earnings including bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNMTHPPPC2`: Monthly earnings excluding bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EDA_ISCED1`: Educational attainment, coded to ISCED-A 2011 3 digits (level, orientation, access) (derived)
+
+-   `EDE_ISCED1`: Educational enrolment, coded to ISCED-P 2011 3 digits (level, orientation, access) (derived)
+
+-   `EDI_ISCED1`: Last incomplete education, coded to ISCED-A 2011 digit 1 (level) (derived)
+
+-   `EDU_BQDI`: Educational attainment in broad categories matching BQ and DI
+
+-   `J2_Q07`: Background - At age 14 - Place where you lived
