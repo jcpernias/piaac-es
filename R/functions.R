@@ -12,14 +12,21 @@ parse_col <- function(x, type, na = "") {
   fns[[type]](x, na = na)
 }
 
+split_sep <- function(str, sep) {
+  str_split(str, fixed(sep))
+}
+
+recode_na <- function(x) {
+  switch(x, "NA" = "", x)
+}
+
 # Recodifica valores de una columna
 recode_col <- function(col, cases) {
   # Separa cada caso
-  str_split(cases, fixed("/"))[[1]] |>
+  split_sep(cases, "/")[[1]] |>
     # Separa los valores iniciales y el valor final
-    str_split(fixed("=")) |>
-    map(\(x) list(from = str_split(x[[1]], fixed("|"))[[1]],
-                  to = x[[2]])) |>
+    split_sep("=") |>
+    map(\(x) list(from = split_sep(x[[1]], "|")[[1]], to = recode_na(x[[2]]))) |>
     # Recodifica los valores
     walk(\(x) col[col %in% as.numeric(x$from)] <<- as.numeric(x$to))
 
