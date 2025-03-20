@@ -1,9 +1,40 @@
-# Lee fichero con datos
+# -----------------------------------------------------------------------
+# Lee los ficheros originales con los datos del PIAAC
+# -----------------------------------------------------------------------
 read_puf <- function(file, delim = ",", na = c("", "NA")) {
   read_delim(file, delim = delim, na = na,
              show_col_types = FALSE) |>
     suppressWarnings()
 }
+
+# -----------------------------------------------------------------------
+# Obtiene nombres y tipos de las variables
+# -----------------------------------------------------------------------
+
+get_column_type <- function(x) {
+  col_type_codes <- c("collector_double" = "d",
+                      "collector_character" = "c",
+                      "collector_logical" = "l",
+                      "collector_number" = "c")
+
+  cls <- class(x)[1]
+  col_type_codes[cls] |> unname()
+}
+
+store_col_types <- function(db, file) {
+  cols <- spec(db)[[1]]
+  types <- map_vec(cols, get_column_type) |> unname()
+  path <- file.path("data-raw", file)
+  tibble(col = 1:length(cols),
+         name = names(cols),
+         type = types) |>
+    write_csv(path)
+  path
+}
+
+# -----------------------------------------------------------------------
+# Selecciona las variables de la base de datos final
+# -----------------------------------------------------------------------
 
 # Cambia el tipo de columna
 parse_col <- function(x, type, na = "") {
@@ -77,6 +108,10 @@ select_cycle_vars <- function(cycle, db_cycle, vars) {
   db
 }
 
+# -----------------------------------------------------------------------
+# Une las bases de datos de cada ciclo
+# -----------------------------------------------------------------------
+
 make_db <- function(c1, c2, vars_file) {
   # Lee las variables a seleccionar en los dos ciclos
   vars <- read_csv(vars_file, col_types = "c")
@@ -91,6 +126,10 @@ make_db <- function(c1, c2, vars_file) {
   # Une los datos de los dos ciclos
   bind_rows(db1, db2)
 }
+
+# -----------------------------------------------------------------------
+# Guarda la base de datos final en un fichero csv
+# -----------------------------------------------------------------------
 
 store_db <- function(db) {
   if (!dir.exists("data")) {
