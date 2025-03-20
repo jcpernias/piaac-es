@@ -319,6 +319,16 @@ Most of the variable names are taken from the cycle 1 database.
 
 -   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
 
+-   `EARNHRBONUS`: (`EARNHRBONUSC2` in cycle 2). Hourly earnings including bonuses for wage and salary earners (derived).
+
+-   `EARNMTH`: (`EARNMTHC2` in cycle 2). Monthly earnings excluding bonuses for wage and salary earners (derived).
+
+-   `EARNMTHBONUS`: (`EARNMTHBONUSC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners (derived).
+
+-   `EARNMTHALL`: (`EARNMTHALLC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners and self-employed (derived).
+
+-   `EARNMTHALLDCL`: (`EARNMTHALLDCLC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners and self-employed, in deciles (derived).
+
 # Proficiency scores
 
 -   `PVLIT1`: Literacy scale score - Plausible value 1.
