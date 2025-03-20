@@ -114,7 +114,7 @@ select_cycle_vars <- function(cycle, db_cycle, vars) {
 
 make_db <- function(c1, c2, vars_file) {
   # Lee las variables a seleccionar en los dos ciclos
-  vars <- read_csv(vars_file, col_types = "c")
+  vars <- read_csv(vars_file, col_types = "c", comment = "#")
 
   # Lee los datos de los dos ciclos. Añade una columna adicional
   # identificando el ciclo
