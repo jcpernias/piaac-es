@@ -16,4 +16,7 @@ LaTeX: pdfLaTeX
 AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
 
+BuildType: Custom
+CustomScriptPath: build.sh
+
 SpellingDictionary: es_ES

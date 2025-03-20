@@ -1,9 +1,14 @@
 ---
-title: "Variables"
+title: "PIAAC Variables"
+
+date: 2025/03/20
+date-format: long
 
 lang: en
 execute: 
   echo: false
+
+tbl-colwidths: [10,90]
 
 format: 
   html:
@@ -15,15 +20,38 @@ format:
   pdf:
     papersize: a4
     documentclass: article
+    toc: true
     number-sections: true
     colorlinks: true
-    pdf-engine: pdflatex
-    fontfamily: kpfonts
+    pdf-engine: lualatex
+    mainfont: Alegreya
+    sansfont: Roboto
+    monofont: "Fira Code"
 ---
 
-The databases contain the following variables:
+Most of the variable names are taken from the cycle 1 database.
+
+# Identification
+
+-   `cycle`: PIAAC cycle.
+
+    | Value | Label |
+    |:----------------------|:-----------------------------------------------|
+    | 1 | Cycle 1 (the survey in Spain was conducted from September 2011 to April 2012. Spain did not participate in the problem-solving assessment.) |
+    | 2 | Cycle 2 (the survey was conducted in Spain from September 2022 to May 2023) |
 
 -   `SEQID`: Sequential ID (randomly derived).
+
+-   `DOORSTEP`: Doorstep Interview administered to respondent. *Note: cycle2 only variable.*
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+# Demographics
+
+## Basic information
 
 -   `GENDER_R`: Person gender.
 
@@ -34,114 +62,30 @@ The databases contain the following variables:
 
 -   `AGE_R`: Person age.
 
--   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
+-   `BIRTHRGN`: Country of birth (9 regions - derived).
 
--   `EDCAT7`: (`EDCAT7_TC1` in cycle 2). Highest level of formal education obtained (7 categories - derived).
+    | Value | Label                                        |
+    |:------|:---------------------------------------------|
+    | 1     | Arab States                                  |
+    | 2     | South and West Asia                          |
+    | 3     | Latin America and the Caribbean              |
+    | 4     | Sub-Saharan Africa                           |
+    | 5     | East Asia and the Pacific (poorer countries) |
+    | 6     | Central Asia                                 |
+    | 7     | East Asia and the Pacific (richer countries) |
+    | 8     | Central and Eastern Europe                   |
+    | 9     | North America and Western Europe             |
 
-    | Value | Label                                          |
-    |:------|:-----------------------------------------------|
-    | 1     | Primary or less (ISCED 1 or less)              |
-    | 2     | Lower secondary (ISCED 2, ISCED 3C short)      |
-    | 3     | Upper secondary (ISCED 3A-B, C long)           |
-    | 4     | Post-secondary, non-tertiary (ISCED 4A-B-C)    |
-    | 5     | Tertiary - professional degree (ISCED 5B)      |
-    | 6     | Tertiary - bachelor degree (ISCED 5A)          |
-    | 7     | Tertiary - master/research degree (ISCED 5A/6) |
-
--   `PVLIT1`: Literacy scale score - Plausible value 1.
-
--   `PVNUM1`: Numeracy scale score - Plausible value 1.
-
--   `PVAPS1`: **(Cycle 2 only)**. Adaptive Problem Solving scale score - Plausible value 1.
-
--   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
+-   `BORNLANG`: Interactions between place of birth and language status (derived).
 
     | Value | Label                             |
     |:------|:----------------------------------|
-    | 1     | Employed or self employed         |
-    | 2     | Retired                           |
-    | 3     | Not working and looking for work  |
-    | 4     | Student (including work programs) |
-    | 5     | Doing unpaid household work       |
-    | 6     | Other                             |
+    | 1     | Native-born and native-language   |
+    | 2     | Native-born and foreign-language  |
+    | 3     | Foreign-born and native-language  |
+    | 4     | Foreign-born and foreign-language |
 
--   `C_D05`: (`C2_D05` in cycle 2). Current status/work history - Employment status (DERIVED BY CAPI).
-
-    | Value | Label                   |
-    |:------|:------------------------|
-    | 1     | Employed                |
-    | 2     | Unemployed              |
-    | 3     | Out of the labour force |
-    | 4     | Not known               |
-
--   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
-
--   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
-
-    | Value | Label |
-    |:---------------------|:-------------------------------------------------|
-    | 1 | The private sector (for example a company) |
-    | 2 | The public sector (for example the local government or a state school) |
-    | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
-
--   `D_Q04`: (`D2_Q04` in cycle 2). Current work - Employee or self-employed.
-
-    | Value | Label         |
-    |:------|:--------------|
-    | 1     | Employee      |
-    | 2     | Self-employed |
-
--   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
-
--   `D2_Q10_C`: Current work - Type of contract (3 categories).
-
-    | Value | Label                                              |
-    |:------|:---------------------------------------------------|
-    | 1     | An indefinite contract                             |
-    | 2     | A fixed term contract, including seasonal contract |
-    | 3     | Other                                              |
-
-    `D_Q09` is a similar variable in cycle 1: Current work - Type of contract.
-
-    | Value | Label                                      |
-    |:------|:-------------------------------------------|
-    | 1     | An indefinite contract                     |
-    | 2     | A fixed term contract                      |
-    | 3     | A temporary employment agency contract     |
-    | 4     | An apprenticeship or other training scheme |
-    | 5     | No contract                                |
-    | 6     | Other                                      |
-
--   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
-
-    | Value | Label |
-    |:---------------------|:-------------------------------------------------|
-    | 1 | No formal qualification or below ISCED 1 |
-    | 2 | ISCED 1 |
-    | 3 | ISCED 2 |
-    | 4 | ISCED 3C shorter than 2 years |
-    | 5 | ISCED 3C 2 years or more |
-    | 6 | ISCED 3A-B |
-    | 7 | ISCED 3 (without distinction A-B-C, 2y+) |
-    | 8 | ISCED 4C |
-    | 9 | ISCED 4A-B |
-    | 10 | ISCED 4 (without distinction A-B-C) |
-    | 11 | ISCED 5B |
-    | 12 | ISCED 5A, bachelor degree |
-    | 13 | ISCED 5A, master degree |
-    | 14 | ISCED 6 |
-    | 15 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
-
--   `D_Q12c`: (`D2_Q12d` in cycle 2). Current work - Requirements - Related work experience
-
-    | Value | Label             |
-    |:------|:------------------|
-    | 1     | None              |
-    | 2     | Less than 1 month |
-    | 3     | 1 to 6 months     |
-    | 4     | 7 to 11 months    |
-    | 5     | 1 or 2 years      |
-    | 6     | 3 years or more   |
+## Household composition
 
 -   `J_Q01`: (`J2_Q01` in cycle 2). Background - People in household.
 
@@ -176,6 +120,8 @@ The databases contain the following variables:
 
 -   `J_Q03b`: (`J2_Q03b` in cycle 2). Background - Number of children.
 
+## Immigration
+
 -   `J_Q04a`: (`A2_Q03a` in cycle 2). Background - Born in country.
 
     | Value | Label |
@@ -185,14 +131,21 @@ The databases contain the following variables:
 
 -   `J_Q04c1`: (`A2_Q03c1` in cycle 2). Background - Age of immigration.
 
--   `J_Q04c2`: (`A2_Q03c2` in cycle 2). Background - Year of immigration.
-
 -   `J_Q06a`: (`A2_Q03d` in cycle 2). Background - Mother/female guardian - Whether born in country.
 
     | Value | Label |
     |:------|:------|
     | 1     | Yes   |
     | 2     | No    |
+
+-   `J_Q07a`: (`A2_Q03e` in cycle 2). Background - Father/male guardian - Whether born in #counrtyname.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+## Parents' education
 
 -   `J_Q06b`: Background - Mother/female guardian - Highest level of education.
 
@@ -210,13 +163,6 @@ The databases contain the following variables:
     | 2     | ISCED 3 and 4     |
     | 3     | ISCED 5--8        |
 
--   `J_Q07a`: (`A2_Q03e` in cycle 2). Background - Father/male guardian - Whether born in #counrtyname.
-
-    | Value | Label |
-    |:------|:------|
-    | 1     | Yes   |
-    | 2     | No    |
-
 -   `J_Q07b`: Background - Father/male guardian - Highest level of education.
 
     | Value | Label                              |
@@ -233,13 +179,311 @@ The databases contain the following variables:
     | 2     | ISCED 3 and 4     |
     | 3     | ISCED 5--8        |
 
--   `J_Q08`: (`J2_Q06` in cycle 2). Background - Number of books at home.
+# Education
 
-    | Value | Label               |
-    |:------|:--------------------|
-    | 1     | 10 books or less    |
-    | 2     | 11 to 25 books      |
-    | 3     | 26 to 100 books     |
-    | 4     | 101 to 200 books    |
-    | 5     | 201 to 500 books    |
-    | 6     | More than 500 books |
+-   `EDCAT7`: (`EDCAT7_TC1` in cycle 2). Highest level of formal education obtained (7 categories - derived).
+
+    | Value | Label                                          |
+    |:------|:-----------------------------------------------|
+    | 1     | Primary or less (ISCED 1 or less)              |
+    | 2     | Lower secondary (ISCED 2, ISCED 3C short)      |
+    | 3     | Upper secondary (ISCED 3A-B, C long)           |
+    | 4     | Post-secondary, non-tertiary (ISCED 4A-B-C)    |
+    | 5     | Tertiary - professional degree (ISCED 5B)      |
+    | 6     | Tertiary - bachelor degree (ISCED 5A)          |
+    | 7     | Tertiary - master/research degree (ISCED 5A/6) |
+
+-   `B_Q01a`: (`B2_Q01_TC1` in cycle 2). Education - Highest qualification - Level. (*Note: Values 15 and 16 were not used in cycle 2. In the Spanish data, only 32 observations took the value 15 and were recoded as NA. Value 16 was not present in the Spanish data*.)
+
+    | Value | Label |
+    |:------------------|:----------------------------------------------------|
+    | 1 | No formal qualification or below ISCED 1 |
+    | 2 | ISCED 1 |
+    | 3 | ISCED 2 |
+    | 4 | ISCED 3C shorter than 2 years |
+    | 5 | ISCED 3C 2 years or more |
+    | 6 | ISCED 3A-B |
+    | 7 | ISCED 3 (without distinction A-B-C, 2y+) |
+    | 8 | ISCED 4C |
+    | 9 | ISCED 4A-B |
+    | 10 | ISCED 4 (without distinction A-B-C) |
+    | 11 | ISCED 5B |
+    | 12 | ISCED 5A, bachelor degree |
+    | 13 | ISCED 5A, master degree |
+    | 14 | ISCED 6 |
+    | 15 | Foreign qualification |
+    | 16 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
+
+-   `B_Q01b`: Education - Highest qualification - Area of study.
+
+    | Value | Label                                       |
+    |:------|:--------------------------------------------|
+    | 1     | General programmes                          |
+    | 2     | Teacher training and education science      |
+    | 3     | Humanities, languages and arts              |
+    | 4     | Social sciences, business and law           |
+    | 5     | Science, mathematics and computing          |
+    | 6     | Engineering, manufacturing and construction |
+    | 7     | Agriculture and veterinary                  |
+    | 8     | Health and welfare                          |
+    | 9     | Services                                    |
+
+    There is a similar but more detailed variable in cycle 2, `B2_Q04_a`. In order to match the categories in the previous table, the cycle 2 values are recoded as shown between brackets in the following table.
+
+    | Value | Label |
+    |:------------------|:----------------------------------------------------|
+    | 1 | Economics, Business and Administration \[4\] |
+    | 2 | Law \[4\] |
+    | 3 | Health \[8\] |
+    | 4 | Welfare \[8\] |
+    | 5 | Social and Behavioral Sciences \[4\] |
+    | 6 | Journalism and Information \[3\] |
+    | 7 | Information and Communication Technologies (ICT) \[5\] |
+    | 8 | Natural Sciences, Mathematics and Statistics \[5\] |
+    | 9 | Engineering and Manufacturing \[9\] |
+    | 10 | Construction \[9\] |
+    | 11 | Agriculture, Forestry, Fisheries and Environmental Studies \[7\] |
+    | 12 | Personal and Community Services \[9\] |
+    | 13 | Security and Transport \[9\] |
+    | 14 | Education and Teacher Training \[2\] |
+    | 15 | Humanities, Languages and Arts \[3\] |
+    | 16 | No main area of study or emphasis, it was a general education programme \[1\] |
+
+-   `B_Q01c1`: (`B2_Q04b1` in cycle 2). Education - Highest qualification - Age of finish.
+
+# Labor force status, work history and job characteristics
+
+## Current status
+
+-   `C_D06`: (`C2_D06` in cycle 2). Current status/work history - Current - Paid job or family business (DERIVED BY CAPI)
+
+    | Value | Label |
+    |:---------------|:-------------------------------------------------------|
+    | 1 | Yes, paid work one job or business |
+    | 2 | Yes, paid work more than one job or business or number of jobs/businesses missing |
+    | 3 | Yes, unpaid work for family business |
+    | 4 | No paid or unpaid work |
+    | 5 | Not known |
+
+-   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
+
+    | Value | Label                             |
+    |:------|:----------------------------------|
+    | 1     | Employed or self employed         |
+    | 2     | Retired                           |
+    | 3     | Not working and looking for work  |
+    | 4     | Student (including work programs) |
+    | 5     | Doing unpaid household work       |
+    | 6     | Other                             |
+
+-   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
+
+    | Value | Label |
+    |:-------------------------|:---------------------------------------------|
+    | 1 | The private sector (for example a company) |
+    | 2 | The public sector (for example the local government or a state school) |
+    | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
+
+-   `D_Q04`: (`D2_Q04` in cycle 2). Current work - Employee or self-employed.
+
+    | Value | Label         |
+    |:------|:--------------|
+    | 1     | Employee      |
+    | 2     | Self-employed |
+
+-   `D_Q06a`: Current work - Amount of people working for employer.
+
+    | Value | Label                 |
+    |:------|:----------------------|
+    | 1     | 1 to 10 people        |
+    | 2     | 11 to 50 people       |
+    | 3     | 51 to 250 people      |
+    | 4     | 251 to 1000 people    |
+    | 5     | More than 1000 people |
+
+    There is a similar but more detailed variable in cycle 2, `D2_Q07a`. In order to match the categories in the previous table, the cycle 2 values are recoded as shown between brackets in the following table.
+
+    | Value | Label                                |
+    |:------|:-------------------------------------|
+    | 1     | 1 to 10 people \[1\]                 |
+    | 2     | 11 to 49 people \[2\]                |
+    | 3     | 50 to 249 people \[3\]               |
+    | 4     | 250 to 499 people \[4\]              |
+    | 5     | 500 to 999 people \[4\]              |
+    | 6     | 1000 and more than 1000 people \[5\] |
+
+-   `D_Q07b`: Current work - Employees working for you - Count. *Note: same values as `D_Q06a`. Also, in cycle 2 a similar variable, `D2_Q08b`, is recoded as `D2_Q07a`.*
+
+-   `D_Q08b`: (`D2_Q09b` in cycle 2). Current work - Managing other employees - Count.
+
+    | Value | Label              |
+    |:------|:-------------------|
+    | 1     | 1 to 5 people      |
+    | 2     | 6 to 10 people     |
+    | 3     | 11 to 24 people    |
+    | 4     | 25 to 99 people    |
+    | 5     | 100 or more people |
+
+-   `D_Q10`: (`D2_Q11` in cycle 2). Current work - Hours/week.
+
+-   `D2_Q10_C`: Current work - Type of contract (3 categories).
+
+    | Value | Label                                              |
+    |:------|:---------------------------------------------------|
+    | 1     | An indefinite contract                             |
+    | 2     | A fixed term contract, including seasonal contract |
+    | 3     | Other                                              |
+
+    `D_Q09` is a similar but more detailed variable in cycle 1. In order to match the categories in the previous table, the `D_Q09` values are recoded as shown between brackets in the following table.
+
+    | Value | Label                                            |
+    |:------|:-------------------------------------------------|
+    | 1     | An indefinite contract                           |
+    | 2     | A fixed term contract                            |
+    | 3     | A temporary employment agency contract           |
+    | 4     | An apprenticeship or other training scheme \[3\] |
+    | 5     | No contract \[3\]                                |
+    | 6     | Other \[3\]                                      |
+
+## Current work requirements
+
+-   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
+
+    | Value | Label |
+    |:-------------------------|:---------------------------------------------|
+    | 1 | No formal qualification or below ISCED 1 |
+    | 2 | ISCED 1 |
+    | 3 | ISCED 2 |
+    | 4 | ISCED 3C shorter than 2 years |
+    | 5 | ISCED 3C 2 years or more |
+    | 6 | ISCED 3A-B |
+    | 7 | ISCED 3 (without distinction A-B-C, 2y+) |
+    | 8 | ISCED 4C |
+    | 9 | ISCED 4A-B |
+    | 10 | ISCED 4 (without distinction A-B-C) |
+    | 11 | ISCED 5B |
+    | 12 | ISCED 5A, bachelor degree |
+    | 13 | ISCED 5A, master degree |
+    | 14 | ISCED 6 |
+    | 15 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
+
+-   `D_Q12c`: (`D2_Q12d` in cycle 2). Current work - Requirements - Related work experience
+
+    | Value | Label             |
+    |:------|:------------------|
+    | 1     | None              |
+    | 2     | Less than 1 month |
+    | 3     | 1 to 6 months     |
+    | 4     | 7 to 11 months    |
+    | 5     | 1 or 2 years      |
+    | 6     | 3 years or more   |
+
+## Occupation and industry
+
+-   `ISCOSKIL4`: Occupational classification of respondent's job (4 skill based categories), last or current (derived).
+
+    | Value | Label                                 |
+    |:------|:--------------------------------------|
+    | 1     | Skilled occupations                   |
+    | 2     | Semi-skilled white-collar occupations |
+    | 3     | Semi-skilled blue-collar occupations  |
+    | 4     | Elementary occupations                |
+
+-   `ISCI1C`: Industry classification of respondent's job at 1-digit level (ISIC rev 4), current job (derived).
+
+    | Value | Label |
+    |:-------------------|:---------------------------------------------------|
+    | A | Agriculture, forestry and fishing |
+    | B | Mining and quarrying |
+    | C | Manufacturing |
+    | D | Electricity, gas, steam and air conditioning supply |
+    | E | Water supply; sewerage, waste management and remediation activities |
+    | F | Construction |
+    | G | Wholesale and retail trade; repair of motor vehicles and motorcycles |
+    | H | Transportation and storage |
+    | I | Accommodation and food service activities |
+    | J | Information and communication |
+    | K | Financial and insurance activities |
+    | L | Real estate activities |
+    | M | Professional, scientific and technical activities |
+    | N | Administrative and support service activities |
+    | O | Public administration and defence; compulsory social security |
+    | P | Education |
+    | Q | Human health and social work activities |
+    | R | Arts, entertainment and recreation |
+    | S | Other service activities |
+    | T | Activities of households as employers; undifferentiated goods- and services-producing activ. of households for own use |
+    | U | Activities of extraterritorial organizations and bodies |
+
+-   `ISCI1L`: Industry classification of respondent's job at 1-digit level (ISIC rev 4), last job (derived). *Note: The values are the same as in the previous variable.*
+
+## Work history
+
+-   `C_Q08a`: (`C2_Q09a` in cycle 2). Current status/work history - Ever paid work.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `C_Q08c1`: (`C2_Q09c1` in cycle 2). Current status/work history - Age when stopped working in last job.
+
+-   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
+
+-   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
+
+-   `D_Q05b1`: (`D2_Q05b1` in cycle 2). Current work - Start of work for business - Age.
+
+## Earnings
+
+-   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
+
+-   `EARNHRBONUS`: (`EARNHRBONUSC2` in cycle 2). Hourly earnings including bonuses for wage and salary earners (derived).
+
+-   `EARNMTH`: (`EARNMTHC2` in cycle 2). Monthly earnings excluding bonuses for wage and salary earners (derived).
+
+-   `EARNMTHBONUS`: (`EARNMTHBONUSC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners (derived).
+
+-   `EARNMTHALL`: (`EARNMTHALLC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners and self-employed (derived).
+
+-   `EARNMTHALLDCL`: (`EARNMTHALLDCLC2` in cycle 2). Monthly earnings including bonuses for wage and salary earners and self-employed, in deciles (derived).
+
+# Proficiency scores
+
+-   `PVLIT1`, `PVLIT2`, ..., `PVLIT10`: Literacy scale score - Plausible values 1 to 10.
+
+-   `PVNUM1`, `PVNUM2`, ..., `PVNUM10`: Numeracy scale score - Plausible values 1 to 10.
+
+-   `PVAPS1`, `PVAPS2`, ..., `PVAPS10`: Adaptive Problem Solving scale score - Plausible values 1 to 10. *Note: only in cycle 2.*
+
+# Missing variables
+
+Cycle 1:
+
+-   `D_Q16b_T`: Wage or salary \[weekly/hourly\] before taxes and deductions (Trend-IALS/ALL)
+
+Cycle 2:
+
+-   `D2_Q10`: Current work - Type of contract
+
+-   `E2_Q06`: Last job - Amount of people working for employer
+
+-   `E2_Q08`: Last job - Type of contract
+
+-   `EARNHRBONUSPPPC2`: Hourly earnings including bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNHRPPPC2`: Hourly earnings excluding bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNMTHBONUSPPPC2`: Monthly earnings including bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EARNMTHPPPC2`: Monthly earnings excluding bonuses for wage and salary earners, PPP corrected \$US (derived)
+
+-   `EDA_ISCED1`: Educational attainment, coded to ISCED-A 2011 3 digits (level, orientation, access) (derived)
+
+-   `EDE_ISCED1`: Educational enrolment, coded to ISCED-P 2011 3 digits (level, orientation, access) (derived)
+
+-   `EDI_ISCED1`: Last incomplete education, coded to ISCED-A 2011 digit 1 (level) (derived)
+
+-   `EDU_BQDI`: Educational attainment in broad categories matching BQ and DI
+
+-   `J2_Q07`: Background - At age 14 - Place where you lived

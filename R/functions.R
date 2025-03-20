@@ -1,9 +1,40 @@
-# Lee fichero con datos
+# -----------------------------------------------------------------------
+# Lee los ficheros originales con los datos del PIAAC
+# -----------------------------------------------------------------------
 read_puf <- function(file, delim = ",", na = c("", "NA")) {
   read_delim(file, delim = delim, na = na,
              show_col_types = FALSE) |>
     suppressWarnings()
 }
+
+# -----------------------------------------------------------------------
+# Obtiene nombres y tipos de las variables
+# -----------------------------------------------------------------------
+
+get_column_type <- function(x) {
+  col_type_codes <- c("collector_double" = "d",
+                      "collector_character" = "c",
+                      "collector_logical" = "l",
+                      "collector_number" = "c")
+
+  cls <- class(x)[1]
+  col_type_codes[cls] |> unname()
+}
+
+store_col_types <- function(db, file) {
+  cols <- spec(db)[[1]]
+  types <- map_vec(cols, get_column_type) |> unname()
+  path <- file.path("data-raw", file)
+  tibble(col = 1:length(cols),
+         name = names(cols),
+         type = types) |>
+    write_csv(path)
+  path
+}
+
+# -----------------------------------------------------------------------
+# Selecciona las variables de la base de datos final
+# -----------------------------------------------------------------------
 
 # Cambia el tipo de columna
 parse_col <- function(x, type, na = "") {
@@ -12,14 +43,24 @@ parse_col <- function(x, type, na = "") {
   fns[[type]](x, na = na)
 }
 
+# Utiliza el separador dado par divide cadenas
+split_sep <- function(str, sep) {
+  str_split(str, fixed(sep))
+}
+
+# Cambia la cadena "NA" por ""
+recode_na <- function(x) {
+  switch(x, "NA" = "", x)
+}
+
 # Recodifica valores de una columna
 recode_col <- function(col, cases) {
   # Separa cada caso
-  str_split(cases, fixed("/"))[[1]] |>
+  split_sep(cases, "/")[[1]] |>
     # Separa los valores iniciales y el valor final
-    str_split(fixed("=")) |>
-    map(\(x) list(from = str_split(x[[1]], fixed("|"))[[1]],
-                  to = x[[2]])) |>
+    split_sep("=") |>
+    map(\(x) list(from = split_sep(x[[1]], "|")[[1]],
+                  to = recode_na(x[[2]]))) |>
     # Recodifica los valores
     walk(\(x) col[col %in% as.numeric(x$from)] <<- as.numeric(x$to))
 
@@ -67,9 +108,13 @@ select_cycle_vars <- function(cycle, db_cycle, vars) {
   db
 }
 
+# -----------------------------------------------------------------------
+# Une las bases de datos de cada ciclo
+# -----------------------------------------------------------------------
+
 make_db <- function(c1, c2, vars_file) {
   # Lee las variables a seleccionar en los dos ciclos
-  vars <- read_csv(vars_file, col_types = "c")
+  vars <- read_csv(vars_file, col_types = "c", comment = "#")
 
   # Lee los datos de los dos ciclos. Añade una columna adicional
   # identificando el ciclo
@@ -82,7 +127,14 @@ make_db <- function(c1, c2, vars_file) {
   bind_rows(db1, db2)
 }
 
+# -----------------------------------------------------------------------
+# Guarda la base de datos final en un fichero csv
+# -----------------------------------------------------------------------
+
 store_db <- function(db) {
+  if (!dir.exists("data")) {
+    dir.create("data")
+  }
   path <- file.path("data", "piaac-es.csv")
   write_csv(db, path, na = "")
   path
