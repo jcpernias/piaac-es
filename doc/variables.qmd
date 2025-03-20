@@ -230,17 +230,6 @@ Most of the variable names are taken from the cycle 1 database.
     | 5     | Doing unpaid household work       |
     | 6     | Other                             |
 
-<!-- -->
-
--   `C_D05`: (`C2_D05` in cycle 2). Current status/work history - Employment status (DERIVED BY CAPI).
-
-    | Value | Label                   |
-    |:------|:------------------------|
-    | 1     | Employed                |
-    | 2     | Unemployed              |
-    | 3     | Out of the labour force |
-    | 4     | Not known               |
-
 -   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
 
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
