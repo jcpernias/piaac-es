@@ -180,6 +180,41 @@ Most of the variable names are taken from the cycle 1 database.
     | 15 | Foreign qualification |
     | 16 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
 
+-   `B_Q01b`: Education - Highest qualification - Area of study.
+
+    | Value | Label |
+    |:-----------------|:-----------------------------------------------------|
+    | 1  | General programmes |
+    | 2  | Teacher training and education science |
+    | 3  | Humanities, languages and arts |
+    | 4  | Social sciences, business and law |
+    | 5  | Science, mathematics and computing |
+    | 6  | Engineering, manufacturing and construction |
+    | 7  | Agriculture and veterinary |
+    | 8  | Health and welfare |
+    | 9  | Services |
+
+    There is a similar but more detailed variable in cycle 2, `B2_Q04_a`. In order to match the categories in the previous table, the cycle 2 values are recoded as shown between brackets in the following table.
+
+    | Value | Label |
+    |:-----------------|:-----------------------------------------------------|
+    | 1  | Economics, Business and Administration [4]                                  |
+    | 2  | Law [4]                                                                     |
+    | 3  | Health [8]                                                                  |
+    | 4  | Welfare [8]                                                                 |
+    | 5  | Social and Behavioral Sciences [4]                                          |
+    | 6  | Journalism and Information [3]                                              |
+    | 7  | Information and Communication Technologies (ICT) [5]                        |
+    | 8  | Natural Sciences, Mathematics and Statistics [5]                            |
+    | 9  | Engineering and Manufacturing [9]                                           |
+    | 10 | Construction [9]                                                            |
+    | 11 | Agriculture, Forestry, Fisheries and Environmental Studies [7]              |
+    | 12 | Personal and Community Services [9]                                         |
+    | 13 | Security and Transport [9]                                                  |
+    | 14 | Education and Teacher Training [2]                                          |
+    | 15 | Humanities, Languages and Arts [3]                                          |
+    | 16 | No main area of study or emphasis, it was a general education programme [1] |
+
 -   `B_Q01c1`: (`B2_Q04b1` in cycle 2). Education - Highest qualification - Age of finish.
 
 # Labor force status, work history and job characteristics
