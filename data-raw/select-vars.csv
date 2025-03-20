@@ -24,7 +24,6 @@ J_Q03a,1,i,N|R,,
 J_Q03b,1,i,N|V,,
 J_Q04a,1,i,N|R,,
 J_Q04c1,1,i,N|V,,
-J_Q04c2,1,i,N|V,,
 J_Q06a,1,i,N|D|R,,
 J_Q06b,1,i,N|D|R,,
 J_Q07a,1,i,N|D|R,,
@@ -49,7 +48,6 @@ J2_Q03a,2,,,,J_Q03a
 J2_Q03b,2,i,.v|.r,,J_Q03b
 A2_Q03a,2,,,,J_Q04a
 A2_Q03c1,2,i,.v|.r,,J_Q04c1
-A2_Q03c2,2,i,.v|.r,,J_Q04c2
 A2_Q03d,2,,.v|.d|.r,,J_Q06a
 J2_Q04c,2,i,.d|.r,,J_Q06b
 A2_Q03e,2,i,.d,,J_Q07a

@@ -32,13 +32,15 @@ Most of the variable names are taken from the cycle 1 database.
 -   `cycle`: PIAAC cycle.
 
     | Value | Label |
-    |:---------------------|:-------------------------------------------------|
+    |:----------------------|:------------------------------------------------|
     | 1 | Cycle 1 (the survey in Spain was conducted from September 2011 to April 2012. Spain did not participate in the problem-solving assessment.) |
     | 2 | Cycle 2 (the survey was conducted in Spain from September 2022 to May 2023) |
 
 -   `SEQID`: Sequential ID (randomly derived).
 
 # Demographics
+
+## Basic information
 
 -   `GENDER_R`: Person gender.
 
@@ -48,6 +50,8 @@ Most of the variable names are taken from the cycle 1 database.
     | 2     | Female |
 
 -   `AGE_R`: Person age.
+
+## Household composition
 
 -   `J_Q01`: (`J2_Q01` in cycle 2). Background - People in household.
 
@@ -82,6 +86,8 @@ Most of the variable names are taken from the cycle 1 database.
 
 -   `J_Q03b`: (`J2_Q03b` in cycle 2). Background - Number of children.
 
+## Immigration
+
 -   `J_Q04a`: (`A2_Q03a` in cycle 2). Background - Born in country.
 
     | Value | Label |
@@ -91,8 +97,6 @@ Most of the variable names are taken from the cycle 1 database.
 
 -   `J_Q04c1`: (`A2_Q03c1` in cycle 2). Background - Age of immigration.
 
--   `J_Q04c2`: (`A2_Q03c2` in cycle 2). Background - Year of immigration.
-
 -   `J_Q06a`: (`A2_Q03d` in cycle 2). Background - Mother/female guardian - Whether born in country.
 
     | Value | Label |
@@ -100,6 +104,14 @@ Most of the variable names are taken from the cycle 1 database.
     | 1     | Yes   |
     | 2     | No    |
 
+-   `J_Q07a`: (`A2_Q03e` in cycle 2). Background - Father/male guardian - Whether born in #counrtyname.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+## Parents' education 
 -   `J_Q06b`: Background - Mother/female guardian - Highest level of education.
 
     | Value | Label                              |
@@ -115,13 +127,6 @@ Most of the variable names are taken from the cycle 1 database.
     | 1     | ISCED 0, 1, and 2 |
     | 2     | ISCED 3 and 4     |
     | 3     | ISCED 5--8        |
-
--   `J_Q07a`: (`A2_Q03e` in cycle 2). Background - Father/male guardian - Whether born in #counrtyname.
-
-    | Value | Label |
-    |:------|:------|
-    | 1     | Yes   |
-    | 2     | No    |
 
 -   `J_Q07b`: Background - Father/male guardian - Highest level of education.
 
@@ -156,7 +161,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `B_Q01a`: (`B2_Q01_TC1` in cycle 2). Education - Highest qualification - Level. (*Note: Values 15 and 16 were not used in cycle 2. In the Spanish data, only 32 observations took the value 15 and were recoded as NA. Value 16 was not present in the Spanish data*.)
 
     | Value | Label |
-    |:----------------|:------------------------------------------------------|
+    |:-----------------|:-----------------------------------------------------|
     | 1 | No formal qualification or below ISCED 1 |
     | 2 | ISCED 1 |
     | 3 | ISCED 2 |
