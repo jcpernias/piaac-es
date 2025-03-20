@@ -219,6 +219,8 @@ Most of the variable names are taken from the cycle 1 database.
 
 # Labor force status, work history and job characteristics
 
+## Current status
+
 -   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
 
     | Value | Label                             |
@@ -229,8 +231,6 @@ Most of the variable names are taken from the cycle 1 database.
     | 4     | Student (including work programs) |
     | 5     | Doing unpaid household work       |
     | 6     | Other                             |
-
--   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
 
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
@@ -246,8 +246,6 @@ Most of the variable names are taken from the cycle 1 database.
     |:------|:--------------|
     | 1     | Employee      |
     | 2     | Self-employed |
-
--   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
 
 -   `D2_Q10_C`: Current work - Type of contract (3 categories).
 
@@ -267,6 +265,8 @@ Most of the variable names are taken from the cycle 1 database.
     | 4     | An apprenticeship or other training scheme |
     | 5     | No contract                                |
     | 6     | Other                                      |
+
+## Current work requirements
 
 -   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
 
@@ -298,6 +298,16 @@ Most of the variable names are taken from the cycle 1 database.
     | 4     | 7 to 11 months    |
     | 5     | 1 or 2 years      |
     | 6     | 3 years or more   |
+
+
+## Work history
+
+-   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
+
+-   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
+
+
+## Earnings 
 
 -   `EARNHR`: (`EARNHRC2` in cycle 2). Hourly earnings excluding bonuses for wage and salary earners (derived).
 
