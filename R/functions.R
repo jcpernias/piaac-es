@@ -12,10 +12,12 @@ parse_col <- function(x, type, na = "") {
   fns[[type]](x, na = na)
 }
 
+# Utiliza el separador dado par divide cadenas
 split_sep <- function(str, sep) {
   str_split(str, fixed(sep))
 }
 
+# Cambia la cadena "NA" por ""
 recode_na <- function(x) {
   switch(x, "NA" = "", x)
 }
@@ -26,7 +28,8 @@ recode_col <- function(col, cases) {
   split_sep(cases, "/")[[1]] |>
     # Separa los valores iniciales y el valor final
     split_sep("=") |>
-    map(\(x) list(from = split_sep(x[[1]], "|")[[1]], to = recode_na(x[[2]]))) |>
+    map(\(x) list(from = split_sep(x[[1]], "|")[[1]],
+                  to = recode_na(x[[2]]))) |>
     # Recodifica los valores
     walk(\(x) col[col %in% as.numeric(x$from)] <<- as.numeric(x$to))
 
