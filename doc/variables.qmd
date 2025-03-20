@@ -17,6 +17,7 @@ format:
   pdf:
     papersize: a4
     documentclass: article
+    toc: true
     number-sections: true
     colorlinks: true
     pdf-engine: lualatex
