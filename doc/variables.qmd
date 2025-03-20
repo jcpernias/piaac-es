@@ -447,9 +447,11 @@ Most of the variable names are taken from the cycle 1 database.
 
 # Proficiency scores
 
--   `PVLIT1`: Literacy scale score - Plausible value 1.
+-   `PVLIT1`, `PVLIT2`, ..., `PVLIT10`: Literacy scale score - Plausible values 1 to 10.
 
--   `PVNUM1`: Numeracy scale score - Plausible value 1.
+-   `PVNUM1`, `PVNUM2`, ..., `PVNUM10`: Numeracy scale score - Plausible values 1 to 10.
+
+-   `PVAPS1`, `PVAPS2`, ..., `PVAPS10`: Adaptive Problem Solving scale score - Plausible values 1 to 10. *Note: only in cycle 2.*
 
 # Missing variables
 
