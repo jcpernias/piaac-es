@@ -302,10 +302,18 @@ Most of the variable names are taken from the cycle 1 database.
 
 ## Work history
 
+-   `C_Q08a`: (`C2_Q09a` in cycle 2). Current status/work history - Ever paid work.
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+-   `C_Q08c1`: (`C2_Q09c1` in cycle 2). Current status/work history - Age when stopped working in last job.
+
 -   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
 
 -   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
-
 
 ## Earnings 
 
