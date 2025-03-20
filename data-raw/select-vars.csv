@@ -21,6 +21,7 @@ C_Q09,1,i,N|V|D|R,,
 D_Q03,1,i,N|V|D|R,,
 D_Q04,1,i,N|V|D|R,,
 D_Q05a1,1,i,N|V|D|R,,
+D_Q05b1,1,i,V|N,,
 D_Q09,1,i,N|V|D|R,4|5|6=3,D2_Q10_C
 D_Q12a,1,i,N|V|D|R,,
 D_Q12c,1,i,N|V|D|R,,
@@ -35,6 +36,10 @@ J_Q06a,1,i,N|D|R,,
 J_Q06b,1,i,N|D|R,,
 J_Q07a,1,i,N|D|R,,
 J_Q07b,1,i,N|D|R,,
+ISCOSKIL4,1,i,A|U,,
+ISIC1C,1,,.|9995|9996|9997|9998|9999,,
+ISIC1L,1,,.|9995|9996|9997|9998|9999,,
+DOORSTEP,2,,,,
 EARNHRC2,2,d,.v,,EARNHR
 EARNHRBONUSC2,2,d,.v,,EARNHRBONUS
 EARNMTHC2,2,d,.v,,EARNMTH
@@ -52,6 +57,7 @@ C2_Q10,2,i,.v|.d|.r,,C_Q09
 D2_Q03,2,i,.v|.d|.r,,D_Q03
 D2_Q04,2,i,.v|.d|.r,,D_Q04
 D2_Q05a1,2,i,.v|.d|.r,,D_Q05a1
+D2_Q05b1,2,i,.v|.d|.r,,D_Q05b1
 D2_Q10_C,2,i,.v|.d|.r,,
 D2_Q12a_TC1,2,i,.v|.d|.r,,D_Q12a
 D2_Q12d,2,i,.v|.d|.r,,D_Q12c
@@ -66,3 +72,7 @@ A2_Q03d,2,,.v|.d|.r,,J_Q06a
 J2_Q04c,2,i,.d|.r,,J_Q06b
 A2_Q03e,2,i,.d,,J_Q07a
 J2_Q05c,2,i,.d|.r,,J_Q07b
+ISCOSKIL4,2,i,.a|.n|.u,,
+ISIC1C,2,,995|996|997|998|999,,
+ISIC1L,2,,995|996|997|998|999,,
+

@@ -39,6 +39,14 @@ Most of the variable names are taken from the cycle 1 database.
 
 -   `SEQID`: Sequential ID (randomly derived).
 
+-   `DOORSTEP`: Doorstep Interview administered to respondent. *Note: cycle2 only variable.*
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Yes   |
+    | 2     | No    |
+
+
 # Demographics
 
 ## Basic information
@@ -299,6 +307,46 @@ Most of the variable names are taken from the cycle 1 database.
     | 5     | 1 or 2 years      |
     | 6     | 3 years or more   |
 
+## Occupation and industry 
+
+-   `ISCOSKIL4`: Occupational classification of respondent's job (4 skill based categories), last or current (derived).
+
+    | Value | Label             |
+    |:------|:------------------|
+    | 1     | Skilled occupations |
+    | 2     | Semi-skilled white-collar occupations |
+    | 3     | Semi-skilled blue-collar occupations |
+    | 4     | Elementary occupations |
+
+
+-   `ISCI1C`: Industry classification of respondent's job at 1-digit level (ISIC rev 4), current job (derived).
+
+    | Value | Label             |
+    |:------|:------------------|
+    | A | Agriculture, forestry and fishing |
+    | B | Mining and quarrying |
+    | C | Manufacturing |
+    | D | Electricity, gas, steam and air conditioning supply |
+    | E | Water supply; sewerage, waste management and remediation activities |
+    | F | Construction |
+    | G | Wholesale and retail trade; repair of motor vehicles and motorcycles |
+    | H | Transportation and storage |
+    | I | Accommodation and food service activities |
+    | J | Information and communication |
+    | K | Financial and insurance activities |
+    | L | Real estate activities |
+    | M | Professional, scientific and technical activities |
+    | N | Administrative and support service activities |
+    | O | Public administration and defence; compulsory social security |
+    | P | Education |
+    | Q | Human health and social work activities |
+    | R | Arts, entertainment and recreation |
+    | S | Other service activities |
+    | T | Activities of households as employers; undifferentiated goods- and services-producing activ. of households for own use |
+    | U | Activities of extraterritorial organizations and bodies |
+
+-   `ISCI1L`: Industry classification of respondent's job at 1-digit level (ISIC rev 4), last job (derived). *Note: The values are the same as in the previous variable.*
+
 
 ## Work history
 
@@ -314,6 +362,8 @@ Most of the variable names are taken from the cycle 1 database.
 -   `C_Q09`: (`C2_Q10` in cycle 2). Current status/work history - Years of paid work during lifetime.
 
 -   `D_Q05a1`: (`D2_Q05a1` in cycle 2). Current work - Start of work for employer - Age.
+
+-   `D_Q05b1`: (`D2_Q05b1` in cycle 2). Current work - Start of work for business - Age.
 
 ## Earnings 
 
