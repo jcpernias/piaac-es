@@ -106,6 +106,20 @@ Most of the variable names are taken from the cycle 1 database.
 
 -   `J_Q04c1`: (`A2_Q03c1` in cycle 2). Background - Age of immigration.
 
+- `BIRTHRGN`: Country of birth (9 regions - derived)
+
+    | Value | Label |
+    |:------|:------|
+    | 1     | Arab States |
+    | 2     | South and West Asia |
+    | 3     | Latin America and the Caribbean |
+    | 4     | Sub-Saharan Africa |
+    | 5     | East Asia and the Pacific (poorer countries) |
+    | 6     | Central Asia |
+    | 7     | East Asia and the Pacific (richer countries) |
+    | 8     | Central and Eastern Europe |
+    | 9     | North America and Western Europe |
+
 -   `J_Q06a`: (`A2_Q03d` in cycle 2). Background - Mother/female guardian - Whether born in country.
 
     | Value | Label |
