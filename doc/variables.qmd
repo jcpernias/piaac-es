@@ -32,7 +32,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `cycle`: PIAAC cycle.
 
     | Value | Label |
-    |:--------------------|:--------------------------------------------------|
+    |:---------------------|:-------------------------------------------------|
     | 1 | Cycle 1 (the survey in Spain was conducted from September 2011 to April 2012. Spain did not participate in the problem-solving assessment.) |
     | 2 | Cycle 2 (the survey was conducted in Spain from September 2022 to May 2023) |
 
@@ -156,7 +156,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `B_Q01a`: (`B2_Q01_TC1` in cycle 2). Education - Highest qualification - Level. (*Note: Values 15 and 16 were not used in cycle 2. In the Spanish data, only 32 observations took the value 15 and were recoded as NA. Value 16 was not present in the Spanish data*.)
 
     | Value | Label |
-    |:-------------|:--------------------------------------------------------|
+    |:----------------|:------------------------------------------------------|
     | 1 | No formal qualification or below ISCED 1 |
     | 2 | ISCED 1 |
     | 3 | ISCED 2 |
@@ -173,6 +173,8 @@ Most of the variable names are taken from the cycle 1 database.
     | 14 | ISCED 6 |
     | 15 | Foreign qualification |
     | 16 | ISCED 5A bachelor degree, 5A master degree, and 6 (without distinction) |
+
+-   `B_Q01c1`: (`B2_Q04b1` in cycle 2). Education - Highest qualification - Age of finish.
 
 # Labor force status, work history and job characteristics
 
@@ -203,7 +205,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `D_Q03`: (`D2_Q03` in cycle 2). Current work - Economic sector.
 
     | Value | Label |
-    |:------------------------|:---------------------------------------------|
+    |:-------------------------|:---------------------------------------------|
     | 1 | The private sector (for example a company) |
     | 2 | The public sector (for example the local government or a state school) |
     | 3 | A non-profit organisation (for example a charity, professional association or religious organisation) |
@@ -239,7 +241,7 @@ Most of the variable names are taken from the cycle 1 database.
 -   `D_Q12a`: (`D2_Q12a_TC1` in cycle 2). Current work - Requirements - Education level
 
     | Value | Label |
-    |:------------------------|:---------------------------------------------|
+    |:-------------------------|:---------------------------------------------|
     | 1 | No formal qualification or below ISCED 1 |
     | 2 | ISCED 1 |
     | 3 | ISCED 2 |
