@@ -14,6 +14,7 @@ EDCAT7,1,i,N,,
 B_Q01a,1,i,N|D|R,15=NA,
 B_Q01b,1,i,V|D|N|R,,
 B_Q01c1,1,i,N|V|D|R,,
+C_D06,1,i,N,,
 C_Q07_T,1,i,N|M,,
 C_Q08a,1,i,V|N,,
 C_Q08c1,1,i,V|N|R|D,,
@@ -22,7 +23,11 @@ D_Q03,1,i,N|V|D|R,,
 D_Q04,1,i,N|V|D|R,,
 D_Q05a1,1,i,N|V|D|R,,
 D_Q05b1,1,i,V|N,,
+D_Q06a,1,i,V|R|N|D,,
+D_Q07b,1,i,V|N,,
+D_Q08b,1,i,N|V,,
 D_Q09,1,i,N|V|D|R,4|5|6=3,D2_Q10_C
+D_Q10,1,i,N|V|D|R,,
 D_Q12a,1,i,N|V|D|R,,
 D_Q12c,1,i,N|V|D|R,,
 J_Q01,1,i,N|D|R,,
@@ -50,6 +55,7 @@ EDCAT7_TC1,2,,,,EDCAT7
 B2_Q01_TC1,2,,,,B_Q01a
 B2_Q04a,2,i,.v|.r|.d,7|8=50/3|4=8/1|2|5=4/6|15=3/9|10=6/11=7/12|13=9/14=2/16=1/50=5,B_Q01b
 B2_Q04b1,2,i,.v|.d|.r,,B_Q01c1
+C2_D06,2,,,,C_D06
 C2_Q07_T,2,,,,C_Q07_T
 C2_Q09a,2,i,.v|.d|.r,,C_Q08a
 C2_Q09c1,2,i,.v|.d|.r,,C_Q08c1
@@ -58,7 +64,11 @@ D2_Q03,2,i,.v|.d|.r,,D_Q03
 D2_Q04,2,i,.v|.d|.r,,D_Q04
 D2_Q05a1,2,i,.v|.d|.r,,D_Q05a1
 D2_Q05b1,2,i,.v|.d|.r,,D_Q05b1
+D2_Q07a,2,i,.v|.d|.r,5=4/6=5,D_Q06a
+D2_Q08b,2,i,.v,5=4/6=5,D_Q07b
+D2_Q09b,2,i,.v|.d|.r,,D_Q08b
 D2_Q10_C,2,i,.v|.d|.r,,
+D2_Q11,2,i,.d|.r|.v,,D_Q10
 D2_Q12a_TC1,2,i,.v|.d|.r,,D_Q12a
 D2_Q12d,2,i,.v|.d|.r,,D_Q12c
 J2_Q01,2,,,,J_Q01

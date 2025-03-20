@@ -229,6 +229,16 @@ Most of the variable names are taken from the cycle 1 database.
 
 ## Current status
 
+-   `C_D06`: (`C2_D06` in cycle 2). Current status/work history - Current - Paid job or family business (DERIVED BY CAPI)
+
+    | Value | Label                             |
+    |:------|:----------------------------------|
+    | 1     |Yes, paid work one job or business |
+    | 2     |Yes, paid work more than one job or business or number of jobs/businesses missing |
+    | 3     |Yes, unpaid work for family business |
+    | 4     |No paid or unpaid work |
+    | 5     |Not known |
+
 -   `C_Q07_T`: (`C2_Q07_T` in cycle 2). Current work situation (Trend-IALS/ALL).
 
     | Value | Label                             |
@@ -255,6 +265,41 @@ Most of the variable names are taken from the cycle 1 database.
     | 1     | Employee      |
     | 2     | Self-employed |
 
+-   `D_Q06a`: Current work - Amount of people working for employer.
+
+    | Value | Label                                      |
+    |:------|:-------------------------------------------|
+    | 1     | 1 to 10 people |
+    | 2     | 11 to 50 people |
+    | 3     | 51 to 250 people |
+    | 4     | 251 to 1000 people |
+    | 5     | More than 1000 people |
+    
+    There is a similar but more detailed variable in cycle 2, `D2_Q07a`. In order to match the categories in the previous table, the cycle 2 values are recoded as shown between brackets in the following table.
+
+    | Value | Label                                      |
+    |:------|:-------------------------------------------|
+    | 1     | 1 to 10 people [1] |
+    | 2     | 11 to 49 people [2] |
+    | 3     | 50 to 249 people [3] |
+    | 4     | 250 to 499 people [4] |
+    | 5     | 500 to 999 people [4] |
+    | 6     | 1000 and more than 1000 people [5] |
+
+-   `D_Q07b`: Current work - Employees working for you - Count. *Note: same values as `D_Q06a`. Also, in cycle 2 a similar variable, `D2_Q08b`, is recoded as `D2_Q07a`.*
+
+-   `D_Q08b`: (`D2_Q09b` in cycle 2). Current work - Managing other employees - Count.
+
+    | Value | Label                             |
+    |:------|:----------------------------------|
+    | 1     | 1 to 5 people |
+    | 2     | 6 to 10 people |
+    | 3     | 11 to 24 people |
+    | 4     | 25 to 99 people |
+    | 5     | 100 or more people |
+    
+-   `D_Q10`: (`D2_Q11` in cycle 2). Current work - Hours/week.
+    
 -   `D2_Q10_C`: Current work - Type of contract (3 categories).
 
     | Value | Label                                              |
@@ -263,16 +308,17 @@ Most of the variable names are taken from the cycle 1 database.
     | 2     | A fixed term contract, including seasonal contract |
     | 3     | Other                                              |
 
-    `D_Q09` is a similar variable in cycle 1: Current work - Type of contract.
+    `D_Q09` is a similar but more detailed variable in cycle 1. In order to match the categories in the previous table, the `D_Q09` values are recoded as shown between brackets in the following table.
 
     | Value | Label                                      |
     |:------|:-------------------------------------------|
     | 1     | An indefinite contract                     |
     | 2     | A fixed term contract                      |
     | 3     | A temporary employment agency contract     |
-    | 4     | An apprenticeship or other training scheme |
-    | 5     | No contract                                |
-    | 6     | Other                                      |
+    | 4     | An apprenticeship or other training scheme [3] |
+    | 5     | No contract [3] |
+    | 6     | Other [3] |
+
 
 ## Current work requirements
 
